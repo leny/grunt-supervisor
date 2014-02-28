@@ -2,6 +2,8 @@
 
 > Run [supervisor](https://github.com/isaacs/node-supervisor) as a grunt task for easy configuration and integration with the rest of your workflow.
 
+[![NPM version](https://badge.fury.io/js/grunt-supervisor.png)](http://badge.fury.io/js/grunt-supervisor) [![Dependency Status](https://david-dm.org/leny/grunt-supervisor.png)](https://david-dm.org/leny/grunt-supervisor)
+
 *This Grunt task is freely inspired from the [grunt-nodemon](https://github.com/ChrisWren/grunt-nodemon) by [Chris Wen](https://github.com/ChrisWren).*
 
 ## Getting Started
@@ -124,7 +126,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
-* **2014/02/28**: Starting project
+* **0.1.0**: Initial release (*28/02/14*)
 
 ## TODO
 
