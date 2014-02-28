@@ -126,6 +126,10 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 * **2014/02/28**: Starting project
 
+## TODO
+
+Write tests :)
+
 ## License
 Copyright (c) 2014 Leny  
 Licensed under the MIT license.

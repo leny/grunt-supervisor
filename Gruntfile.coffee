@@ -31,18 +31,18 @@ module.exports = ( grunt ) ->
                 script: "test/test.js"
             all_options:
                 options:
-                    args: [ "dev" ]
-                    watch: [ "test" ],
-                    ignore: [ "tasks" ],
-                    pollInterval: 500,
-                    extensions: [ "js" ],
-                    exec: "node",
-                    debug: true,
-                    debugBrk: true,
-                    harmony: true,
-                    noRestartOn: no,
-                    forceWatch: true,
-                    quiet: true
+                    args: []
+                    watch: [ "test" ]
+                    ignore: [ "tasks" ]
+                    pollInterval: 500
+                    extensions: [ "js" ]
+                    exec: "node"
+                    debug: true
+                    debugBrk: no
+                    harmony: true
+                    noRestartOn: no
+                    forceWatch: true
+                    quiet: no
                 script: "test/test.js"
 
     grunt.loadTasks "tasks"
