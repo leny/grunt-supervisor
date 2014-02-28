@@ -1,0 +1,36 @@
+{
+  "name": "grunt-supervisor",
+  "version": "0.0.1",
+  "description": "Run supervisor as a grunt task for easy configuration and integration with the rest of your workflow.",
+  "keywords": [],
+  "homepage": "https://github.com/leny/grunt-supervisor",
+  "author": {
+    "name": "leny",
+    "email": "info@flatland.be",
+    "url": "http://leny.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/leny/grunt-supervisor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leny/grunt-supervisor/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/leny/grunt-supervisor/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/grunt-supervisor",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4",
+    "grunt-contrib-jshint": "~0.6",
+    "grunt-contrib-coffee": "~0.10",
+    "grunt-contrib-watch": "~0.5",
+    "matchdep": "~0.3"
+  }
+}
