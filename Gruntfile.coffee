@@ -28,7 +28,7 @@ module.exports = ( grunt ) ->
         supervisor:
             default:
                 options: {}
-                script: "test/test.js"
+                script: "test/fixture/server.js"
             all_options:
                 options:
                     args: []
@@ -43,7 +43,7 @@ module.exports = ( grunt ) ->
                     noRestartOn: no
                     forceWatch: true
                     quiet: no
-                script: "test/test.js"
+                script: "test/fixture/server.js"
 
     grunt.loadTasks "tasks"
 
