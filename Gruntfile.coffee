@@ -8,19 +8,19 @@ module.exports = ( grunt ) ->
         coffee:
             options:
                 bare: yes
-            lib:
+            tasks:
                 files:
-                    "lib/grunt-supervisor.js": "lib/grunt-supervisor.coffee"
+                    "tasks/grunt-supervisor.js": "tasks/grunt-supervisor.coffee"
         jshint:
           options:
             jshintrc: ".jshintrc"
-          lib:
+          tasks:
             src: [
-                "lib/**/*.js"
+                "tasks/**/*.js"
             ]
         watch:
-          lib:
-            files: "<%= jshint.lib.src %>"
+          tasks:
+            files: "<%= jshint.tasks.src %>"
             tasks: [
                 "coffee"
                 "jshint"

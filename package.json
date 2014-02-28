@@ -31,6 +31,10 @@
     "grunt-contrib-jshint": "~0.6",
     "grunt-contrib-coffee": "~0.10",
     "grunt-contrib-watch": "~0.5",
-    "matchdep": "~0.3"
+    "matchdep": "~0.3",
+    "express": "~3.4"
+  },
+  "dependencies": {
+    "supervisor": "~0.5"
   }
 }
