@@ -22,7 +22,6 @@
       "url": "https://github.com/leny/grunt-supervisor/blob/master/LICENSE-MIT"
     }
   ],
-  "main": "lib/grunt-supervisor",
   "engines": {
     "node": ">= 0.8.0"
   },
