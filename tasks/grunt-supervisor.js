@@ -16,7 +16,7 @@ module.exports = function(grunt) {
     var aOptions, oOptions;
     this.async();
     aOptions = [];
-    oOptions = this.data.options;
+    oOptions = this.data.options || {};
     if (grunt.util.kindOf(oOptions.watch) === "array") {
       aOptions.push("--watch", oOptions.watch.join(","));
     }
