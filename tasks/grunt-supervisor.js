@@ -16,21 +16,24 @@ module.exports = function(grunt) {
     var aOptions, oOptions;
     this.async();
     aOptions = [];
-    oOptions = this.data.options || {};
+    oOptions = this.data.options;
     if (grunt.util.kindOf(oOptions.watch) === "array") {
       aOptions.push("--watch", oOptions.watch.join(","));
     }
     if (grunt.util.kindOf(oOptions.ignore) === "array") {
       aOptions.push("--ignore", oOptions.ignore.join(","));
     }
-    if (grunt.util.kindOf(oOptions.pollInterval) === "number") {
-      aOptions.push("--poll-interval", "" + oOptions.pollInterval);
-    }
     if (grunt.util.kindOf(oOptions.extensions) === "array") {
       aOptions.push("--extensions", oOptions.extensions.join(","));
     }
     if (grunt.util.kindOf(oOptions.exec) === "string") {
       aOptions.push("--exec", oOptions.exec);
+    }
+    if (grunt.util.kindOf(oOptions.pollInterval) === "number") {
+      aOptions.push("--poll-interval", "" + oOptions.pollInterval);
+    }
+    if (grunt.util.kindOf(oOptions.noRestartOn) === "string" && (oOptions.noRestartOn === "error" || oOptions.noRestartOn === "exit")) {
+      aOptions.push("--no-restart-on", oOptions.noRestartOn);
     }
     if (oOptions.debug === true) {
       aOptions.push("--debug");
@@ -40,9 +43,6 @@ module.exports = function(grunt) {
     }
     if (oOptions.harmony === true) {
       aOptions.push("--harmony");
-    }
-    if (grunt.util.kindOf(oOptions.noRestartOn) === "string" && (oOptions.noRestartOn === "error" && oOptions.noRestartOn === "exit")) {
-      aOptions.push("--no-restart-on", oOptions.noRestartOn);
     }
     if (oOptions.forceWatch === true) {
       aOptions.push("--force-watch");
