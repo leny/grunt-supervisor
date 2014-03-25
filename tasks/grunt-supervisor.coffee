@@ -16,7 +16,7 @@ module.exports = ( grunt ) ->
         @async()
 
         aOptions = []
-        oOptions = @data.options
+        oOptions = @data.options || {}
 
         aOptions.push "--watch", oOptions.watch.join "," if grunt.util.kindOf( oOptions.watch ) is "array"
         aOptions.push "--ignore", oOptions.ignore.join "," if grunt.util.kindOf( oOptions.ignore ) is "array"
