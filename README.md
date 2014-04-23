@@ -54,7 +54,7 @@ supervisor: {
       noRestartOn: "exit",
       forceWatch: true,
       quiet: true,
-      async: true
+      forceSync: true
     }
   }
 }
