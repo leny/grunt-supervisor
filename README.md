@@ -52,7 +52,8 @@ supervisor: {
       harmony: true
       noRestartOn: "exit",
       forceWatch: true,
-      quiet: true
+      quiet: true,
+      async: true
     }
   }
 }
@@ -120,6 +121,10 @@ This may be useful if you see a high cpu load on a windows machine.
 ##### quiet
 Type: `Boolean`  
 Suppress DEBUG messages
+
+##### async
+Type: `Boolean`  
+Keeps Grunt from exiting. Set to false if there is another task like "watch" folowing this one.
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).

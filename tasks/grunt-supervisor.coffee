@@ -13,10 +13,10 @@ supervisor = require "supervisor"
 module.exports = ( grunt ) ->
 
     grunt.registerMultiTask "supervisor", "Runs a supervisor monitor of your node.js server.", ->
-        @async()
-
         aOptions = []
         oOptions = @data.options || {}
+
+        @async() unless oOptions.async == false
 
         aOptions.push "--watch", oOptions.watch.join "," if grunt.util.kindOf( oOptions.watch ) is "array"
         aOptions.push "--ignore", oOptions.ignore.join "," if grunt.util.kindOf( oOptions.ignore ) is "array"
