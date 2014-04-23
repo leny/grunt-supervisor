@@ -14,9 +14,11 @@ supervisor = require("supervisor");
 module.exports = function(grunt) {
   return grunt.registerMultiTask("supervisor", "Runs a supervisor monitor of your node.js server.", function() {
     var aOptions, oOptions;
-    this.async();
     aOptions = [];
     oOptions = this.data.options || {};
+    if (oOptions.async !== false) {
+      this.async();
+    }
     if (grunt.util.kindOf(oOptions.watch) === "array") {
       aOptions.push("--watch", oOptions.watch.join(","));
     }
