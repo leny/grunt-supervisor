@@ -1,8 +1,10 @@
 # grunt-supervisor
 
+![NPM version](http://img.shields.io/npm/v/grunt-supervisor.svg) ![Dependency Status](https://david-dm.org/leny/grunt-supervisor.svg) ![Downloads counter](http://img.shields.io/npm/dm/grunt-supervisor.svg)
+
 > Run [supervisor](https://github.com/isaacs/node-supervisor) as a grunt task for easy configuration and integration with the rest of your workflow.
 
-[![NPM version](https://badge.fury.io/js/grunt-supervisor.png)](http://badge.fury.io/js/grunt-supervisor) [![Dependency Status](https://david-dm.org/leny/grunt-supervisor.png)](https://david-dm.org/leny/grunt-supervisor)
+* * *
 
 *This Grunt task is freely inspired from the [grunt-nodemon](https://github.com/ChrisWren/grunt-nodemon) by [Chris Wen](https://github.com/ChrisWren).*
 
