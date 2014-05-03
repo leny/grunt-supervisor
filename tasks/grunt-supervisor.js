@@ -16,10 +16,8 @@ module.exports = function(grunt) {
   kindOf = grunt.util.kindOf;
   return grunt.registerMultiTask("supervisor", "Runs a supervisor monitor of your node.js server.", function() {
     var aOptions, oOptions;
-    if (!(oOptions = this.data.options)) {
-      return supervisor.run(["--", this.data.script]);
-    }
     aOptions = [];
+    oOptions = this.data.options || {};
     if (oOptions.forceSync !== true) {
       this.async();
     }

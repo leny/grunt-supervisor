@@ -27,7 +27,6 @@ module.exports = ( grunt ) ->
             ]
         supervisor:
             default:
-                options: {}
                 script: "test/fixture/server.js"
             all_options:
                 options:

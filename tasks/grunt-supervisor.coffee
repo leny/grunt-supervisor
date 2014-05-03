@@ -16,9 +16,8 @@ module.exports = ( grunt ) ->
 
     grunt.registerMultiTask "supervisor", "Runs a supervisor monitor of your node.js server.", ->
 
-        return supervisor.run [ "--", @data.script ] unless oOptions = @data.options
-
         aOptions = []
+        oOptions = @data.options || {}
         @async() unless oOptions.forceSync is yes
 
         aOptions.push "--watch", oOptions.watch.join "," if kindOf( oOptions.watch ) is "array"
