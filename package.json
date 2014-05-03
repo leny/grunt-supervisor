@@ -23,11 +23,11 @@
   },
   "devDependencies": {
     "grunt": "~0.4",
-    "grunt-contrib-jshint": "~0.6",
+    "grunt-contrib-jshint": "~0.10",
     "grunt-contrib-coffee": "~0.10",
-    "grunt-contrib-watch": "~0.5",
+    "grunt-contrib-watch": "~0.6",
     "matchdep": "~0.3",
-    "express": "~3.4"
+    "express": "~4.1"
   },
   "dependencies": {
     "supervisor": "~0.5"
