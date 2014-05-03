@@ -12,29 +12,33 @@ var supervisor;
 supervisor = require("supervisor");
 
 module.exports = function(grunt) {
+  var kindOf;
+  kindOf = grunt.util.kindOf;
   return grunt.registerMultiTask("supervisor", "Runs a supervisor monitor of your node.js server.", function() {
     var aOptions, oOptions;
+    if (!(oOptions = this.data.options)) {
+      return supervisor.run(["--", this.data.script]);
+    }
     aOptions = [];
-    oOptions = this.data.options || {};
     if (oOptions.forceSync !== true) {
       this.async();
     }
-    if (grunt.util.kindOf(oOptions.watch) === "array") {
+    if (kindOf(oOptions.watch) === "array") {
       aOptions.push("--watch", oOptions.watch.join(","));
     }
-    if (grunt.util.kindOf(oOptions.ignore) === "array") {
+    if (kindOf(oOptions.ignore) === "array") {
       aOptions.push("--ignore", oOptions.ignore.join(","));
     }
-    if (grunt.util.kindOf(oOptions.extensions) === "array") {
+    if (kindOf(oOptions.extensions) === "array") {
       aOptions.push("--extensions", oOptions.extensions.join(","));
     }
-    if (grunt.util.kindOf(oOptions.exec) === "string") {
+    if (kindOf(oOptions.exec) === "string") {
       aOptions.push("--exec", oOptions.exec);
     }
-    if (grunt.util.kindOf(oOptions.pollInterval) === "number") {
+    if (kindOf(oOptions.pollInterval) === "number") {
       aOptions.push("--poll-interval", "" + oOptions.pollInterval);
     }
-    if (grunt.util.kindOf(oOptions.noRestartOn) === "string" && (oOptions.noRestartOn === "error" || oOptions.noRestartOn === "exit")) {
+    if (kindOf(oOptions.noRestartOn) === "string" && (oOptions.noRestartOn === "error" || oOptions.noRestartOn === "exit")) {
       aOptions.push("--no-restart-on", oOptions.noRestartOn);
     }
     if (oOptions.debug === true) {
@@ -53,7 +57,7 @@ module.exports = function(grunt) {
       aOptions.push("--quiet");
     }
     aOptions.push("--", this.data.script);
-    if (grunt.util.kindOf(oOptions.args) === "array") {
+    if (kindOf(oOptions.args) === "array") {
       aOptions.push.apply(aOptions, oOptions.args);
     }
     return supervisor.run(aOptions);
