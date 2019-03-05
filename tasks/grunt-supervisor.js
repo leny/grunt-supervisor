@@ -45,6 +45,9 @@ module.exports = function(grunt) {
     if (oOptions.debugBrk === true) {
       aOptions.push("--debug-brk");
     }
+    if (oOptions.inspect === true) {
+      aOptions.push("--inspect");
+    }
     if (oOptions.harmony === true) {
       aOptions.push("--harmony");
     }

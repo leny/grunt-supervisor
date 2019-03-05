@@ -1,6 +1,6 @@
 {
   "name": "grunt-supervisor",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "description": "Run supervisor as a grunt task for easy configuration and integration with the rest of your workflow.",
   "keywords": [ "gruntplugin", "supervisor", "server", "runner", "monitor", "development", "restart", "autoload", "reload" ],
   "homepage": "https://github.com/leny/grunt-supervisor",
@@ -30,6 +30,6 @@
     "express": "~4.1"
   },
   "dependencies": {
-    "supervisor": "~0.6"
+    "supervisor": "0.12.0"
   }
 }

@@ -31,6 +31,7 @@ module.exports = ( grunt ) ->
 
         aOptions.push "--debug" if oOptions.debug is yes
         aOptions.push "--debug-brk" if oOptions.debugBrk is yes
+        aOptions.push "--inspect" if oOptions.inspect is yes
         aOptions.push "--harmony" if oOptions.harmony is yes
         aOptions.push "--force-watch" if oOptions.forceWatch is yes
         aOptions.push "--quiet" if oOptions.quiet is yes

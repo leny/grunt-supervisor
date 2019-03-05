@@ -51,8 +51,9 @@ supervisor: {
       extensions: [ "js,jade" ],
       exec: "node",
       debug: true,
+      inspect: true,
       debugBrk: true,
-      harmony: true
+      harmony: true,
       noRestartOn: "exit",
       forceWatch: true,
       quiet: true,
@@ -104,6 +105,10 @@ Starts node with `--debug` flag.
 ##### debugBrk
 Type: `Boolean`  
 Starts node with `--debug-brk` flag.
+
+##### inspect
+Type: `Boolean`  
+Starts node with `--inspect` flag.
 
 ##### harmony
 Type: `Boolean`  
