@@ -35,7 +35,7 @@
     "grunt": "~1.0",
     "grunt-contrib-jshint": "~2.0",
     "matchdep": "~2.0",
-    "express": "~4.16"
+    "express": "~4.17"
   },
   "dependencies": {
     "supervisor": "~0.12"
