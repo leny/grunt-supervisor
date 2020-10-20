@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "grunt": "~1.2",
-    "grunt-contrib-jshint": "~2.1",
+    "grunt-contrib-jshint": "~3.0",
     "matchdep": "~2.0",
     "express": "~4.17"
   },
